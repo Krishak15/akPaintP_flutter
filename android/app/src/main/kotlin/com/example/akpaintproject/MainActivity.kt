@@ -1,0 +1,6 @@
+package com.example.akpaintproject
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
