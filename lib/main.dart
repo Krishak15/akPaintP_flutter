@@ -1,4 +1,5 @@
 import 'package:akpaintproject/homepage.dart';
+import 'package:akpaintproject/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/services/system_chrome.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePageWidget(),
+      home: SplashWidget(),
     );
   }
 }

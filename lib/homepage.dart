@@ -1,3 +1,4 @@
+import 'package:akpaintproject/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +26,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
           leading: Align(
-            alignment: AlignmentDirectional(-0.15, -0.4),
+            alignment: AlignmentDirectional(-0.15, -0.3),
             child: InkWell(
               onTap: () async {
                 await launchUrlString(
@@ -53,7 +54,28 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               gradientType: GradientType.linear,
             ),
           ),
-          actions: [],
+          actions: [
+            Align(
+              alignment: AlignmentDirectional(0.2, -0.4),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
+                child: InkWell(
+                  onTap: () async {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfileWidget()),
+                    );
+                  },
+                  child: Icon(
+                    Icons.person_outlined,
+                    color: Color.fromARGB(255, 1, 215, 190),
+                    size: 30,
+                  ),
+                ),
+              ),
+            ),
+          ],
           elevation: 1,
         ),
       ),
