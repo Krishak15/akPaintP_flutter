@@ -1,5 +1,6 @@
 import 'package:akpaintproject/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -31,6 +32,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               onTap: () async {
                 await launchUrlString(
                     'https://www.instagram.com/akpaintproject/');
+                HapticFeedback.mediumImpact();
               },
               child: FaIcon(
                 FontAwesomeIcons.instagram,
@@ -66,6 +68,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       MaterialPageRoute(
                           builder: (context) => const ProfileWidget()),
                     );
+                    HapticFeedback.mediumImpact();
                   },
                   child: Icon(
                     Icons.person_outlined,
@@ -94,6 +97,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             ),
             onPressed: () async {
               await launch('https://wa.me/919645304925?text=Hello!!');
+              HapticFeedback.mediumImpact();
             },
           ),
         ),
